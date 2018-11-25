@@ -21,37 +21,92 @@ const int REDKING = 6;
 const int WHITEPLAYER = 1;
 const int REDPLAYER = 2;
 
-//prompt for board size
+//Prompting for checker piece to move
 
-//for loop for all of this, i++
-//if board is more than 18
+int movepiece = 0;
+while ()
+{
+cout << "Enter the square number of the checker you want to move”;
+cin >> movepiece;
 
-cerr << "ERROR: Board size too large.";
+if (!(cin >> movepiece))
+{
+ cerr << "ERROR: You did not enter an integer\n;"
+ cout << "ERROR: Try again";
+ continue;
+}
+else if (movepiece > board || movepiece < board)
+{
+ cerr << "ERROR: That square is not on the board.\n";
+ cout << "Try again";
 continue;
+}
+else if (movepiece == RM || movepiece == RS)
+{
+ cerr << "ERROR: That square contains an opponent’s checker.\n";
+ cout << "Try again";
+ continue;
+}
+else if (movepiece == EMPTYSPACE)
+{
+ cerr << "ERROR: You can jump with another checker, you may not move your chosen checker.";
+ cout << "You can jump using checkers on the following squares: " << countJump
+ continue;
+}
+else if (checker cannot jump)
+{
+ cerr << "ERROR: There is no legal move for this checker.";
+ cout << "Try again";
+ continue;
+}
+}
 
-//else if board less than 8
+//Prompt player on which space they want to move to
 
-cerr << "ERROR: Board size too small.";
-continue;
+while ()
+{
+int movespace = 0;
+cout << " Enter the square number of the square you want to move your checker to";
+cin >> movespace;
 
-//else if board inputed is odd, %2 = 1
+if (!(cin >> movespace))
+{
+ cerr << "ERROR: You did not enter an integer.";
+ cout << "Try again";
+ continue;
+}
+else if (movespace > board || movespace < board)
+{
+ cerr << "ERROR: It is not possible to move to a square that is not on the board.";
+ cout << "Try again";
+ continue;
+}
 
-cerr << "ERROR: Board size odd.";
-continue;
+//call MakeMove to make move
+//Print board
 
-//else if board is not an integer
+//function CountMove1Squares
+int CountMove1Squares(int CMCheckersBoard[MAX_ARRAY_SIZE][MAX_ARRAY_SIZE], int numRowsInBoard, int player, int xLocArray[],  int yLocArray[]);
 
-cerr << "ERROR: Board size is not an integer.";
-continue;
+yLocArray[] = {-1}
+xLocArray[] = {-1}
 
-//else if i == 3
- 
- cerr << "ERROR: Too many errors entering the size of the board.";
- return 1;
+IsMove1Squares( )
 
-//else
+int x = 0;
+xLocArray[x] = xindex;
+if (xLocArray[x] ==0)
+{
+ x++;
+}
 
-break;
+
+
+
+
+
+
+
 
 
 
